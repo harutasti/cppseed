@@ -8,6 +8,7 @@ Design documents:
 
 - [v0.1 requirements](docs/requirements.md)
 - [v0.1 external design](docs/basic-design.md)
+- [v0.1 internal design](docs/detailed-design.md)
 
 ## Planned usage
 

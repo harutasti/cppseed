@@ -4,7 +4,10 @@
 
 > Status: early design phase
 
-See [the v0.1 requirements](docs/requirements.md) for the initial scope and acceptance criteria.
+Design documents:
+
+- [v0.1 requirements](docs/requirements.md)
+- [v0.1 external design](docs/basic-design.md)
 
 ## Planned usage
 

@@ -4,6 +4,8 @@
 
 > Status: early design phase
 
+See [the v0.1 requirements](docs/requirements.md) for the initial scope and acceptance criteria.
+
 ## Planned usage
 
 ```console

@@ -64,7 +64,7 @@ jobs:
         run: |
           set -euo pipefail
           for file in README.md docs/*.md; do
-            grep -oE '\]\([^)#]+' "$file" | sed 's/^](//' |
+            { grep -oE '\]\([^)#]+' "$file" || true; } | sed 's/^](//' |
               while IFS= read -r target; do
                 test -e "$(dirname "$file")/$target"
               done

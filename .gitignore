@@ -19,6 +19,7 @@ Makefile
 *.dylib
 *.dll
 *.exe
+__pycache__/
 
 # Editors and operating systems
 .DS_Store

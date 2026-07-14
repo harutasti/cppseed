@@ -35,7 +35,7 @@ jobs:
     timeout-minutes: 20
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
 
       - name: Configure
         run: >-
@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
         with:
           fetch-depth: 2
       - name: Check whitespace
@@ -63,9 +63,83 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for file in README.md docs/*.md; do
+          while IFS= read -r -d '' file; do
             { grep -oE '\]\([^)#]+' "$file" || true; } | sed 's/^](//' |
               while IFS= read -r target; do
+                case "$target" in
+                  http://*|https://*|mailto:*) continue ;;
+                esac
                 test -e "$(dirname "$file")/$target"
               done
-          done
+          done < <(find . -type f -name '*.md' \
+            -not -path './build*/*' -print0)
+
+  coverage:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+      - name: Install gcovr
+        run: python3 -m pip install --disable-pip-version-check gcovr==8.6
+      - name: Configure coverage build
+        env:
+          CXXFLAGS: --coverage -O0 -g
+        run: >-
+          cmake -S . -B build-coverage
+          -DCMAKE_BUILD_TYPE=Debug
+          -DCPPSEED_BUILD_TESTS=ON
+          -DCPPSEED_WARNINGS_AS_ERRORS=ON
+      - name: Build
+        run: cmake --build build-coverage --parallel
+      - name: Test
+        run: ctest --test-dir build-coverage --output-on-failure
+      - name: Enforce coverage
+        run: >-
+          gcovr
+          --root .
+          --filter 'src/'
+          --exclude 'src/main.cpp'
+          --exclude-unreachable-branches
+          --exclude-throw-branches
+          --txt
+          --json-summary coverage-summary.json
+          --fail-under-line 90
+          --fail-under-branch 80
+      - name: Upload coverage summary
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: coverage-summary
+          path: coverage-summary.json
+          if-no-files-found: ignore
+          retention-days: 7
+
+  performance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+      - name: Configure Release build
+        run: >-
+          cmake -S . -B build-performance
+          -DCMAKE_BUILD_TYPE=Release
+          -DCPPSEED_BUILD_TESTS=OFF
+          -DCPPSEED_WARNINGS_AS_ERRORS=ON
+      - name: Build
+        run: cmake --build build-performance --parallel
+      - name: Measure generation performance
+        run: >-
+          python3 tests/measure_performance.py
+          build-performance/cppseed
+          --warmups 3
+          --runs 30
+          --threshold-seconds 1.0
+          --output performance.json
+      - name: Upload performance result
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: performance-result
+          path: performance.json
+          if-no-files-found: ignore
+          retention-days: 7

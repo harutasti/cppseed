@@ -227,8 +227,9 @@ READMEにはmacOS/Linuxの `shasum -a 256` または `sha256sum`、Windows Power
 
 workflowは次の2契機を持つ。
 
-1. `workflow_dispatch`: packagingのdry run。GitHub Releaseは作成しない
-2. `push` tags `v*.*.*`: draft GitHub Releaseを作成する
+1. `pull_request`: リリース実装に関係する変更のpackaging dry run。GitHub Releaseは作成しない
+2. `workflow_dispatch`: main上の指定refに対するpackaging dry run。GitHub Releaseは作成しない
+3. `push` tags `v*.*.*`: draft GitHub Releaseを作成する
 
 GitHub Actionsのtag filterはglobであるため、`validate` jobで `^v[0-9]+\.[0-9]+\.[0-9]+$` に完全一致することを別途検証する。dry runではmainの指定commitをbuildし、Actions artifactとして7日間保存する。正式実行ではタグがmainの履歴上にあることを確認する。
 

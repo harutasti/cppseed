@@ -11,6 +11,7 @@ Design documents:
 - [v0.1 external design](docs/basic-design.md)
 - [v0.1 internal design](docs/detailed-design.md)
 - [v0.1 test plan](docs/test-plan.md)
+- [v0.1 release plan](docs/release-plan.md)
 
 ## Usage
 

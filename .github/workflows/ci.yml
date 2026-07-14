@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: ${{ matrix.name }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Linux GCC
+            os: ubuntu-24.04
+            compiler: g++
+          - name: Linux Clang
+            os: ubuntu-24.04
+            compiler: clang++
+          - name: macOS Apple Silicon
+            os: macos-15
+            compiler: clang++
+          - name: macOS Intel
+            os: macos-15-intel
+            compiler: clang++
+          - name: Windows MSVC
+            os: windows-2025
+            compiler: cl
+
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Configure
+        run: >-
+          cmake -S . -B build
+          -DCMAKE_CXX_COMPILER=${{ matrix.compiler }}
+          -DCPPSEED_BUILD_TESTS=ON
+          -DCPPSEED_WARNINGS_AS_ERRORS=ON
+
+      - name: Build
+        run: cmake --build build --config Debug --parallel
+
+      - name: Test
+        run: ctest --test-dir build -C Debug --output-on-failure
+
+  docs:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+      - name: Check whitespace
+        run: git diff --check HEAD^ HEAD
+      - name: Check local Markdown links
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in README.md docs/*.md; do
+            { grep -oE '\]\([^)#]+' "$file" || true; } | sed 's/^](//' |
+              while IFS= read -r target; do
+                test -e "$(dirname "$file")/$target"
+              done
+          done

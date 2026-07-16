@@ -552,6 +552,9 @@ G7では次のIDをtest plan/traceabilityへ引き継ぎ、normal、boundary、n
 | permission | PR/dispatch read-only、tag jobだけ最小write | `SC-CTX-005` | `TC-SC-022` |
 | rerun | current attemptのみ集約、orphanを誤採用しない | `SC-ATT-005` | `TC-SC-023` |
 | published immutability | asset差替えなし、新versionで修正 | `SC-PUB-003` | `TC-SC-024` |
+| dependency/action pin | full SHA + version comment、binary/lock hash固定 | `SC-TOOL-002` | `TC-SC-025` |
+| log/summary | token、secret、absolute private pathを含まない | `SC-META-003` | `TC-SC-026` |
+| resource/performance | size/timeout上限内、追加時間の測定値を記録 | `SC-ASSET-004` | `TC-SC-027` |
 
 ## 5. Logging and evidence
 

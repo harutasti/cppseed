@@ -2,17 +2,19 @@
 
 - 文書バージョン: 0.1
 - 対象Gate: G7
-- ステータス: In review
+- ステータス: Approved
 - Owner: `harutasti`
-- 技術レビュー: Pending
-- テスト可能性レビュー: Pending
-- セキュリティレビュー: Pending
+- 技術レビュー: Approved 2026-07-16
+- テスト可能性レビュー: Approved 2026-07-16
+- セキュリティレビュー: Approved with open release blockers 2026-07-16
 - 対象commit/release: G8 implementation candidate / first release after implementation
 - 対象Issue: [#11](https://github.com/harutasti/cppseed/issues/11)
 - Test plan: [テスト計画書](test-plan.md)
 - 上位文書: [要件定義](requirements.md)、[外部設計](external-design.md)、
   [内部設計](detailed-design.md)、[脅威分析](threat-model.md)
 - Review PR: [#25](https://github.com/harutasti/cppseed/pull/25)
+- CI evidence: [CI run 29477256964](https://github.com/harutasti/cppseed/actions/runs/29477256964)、
+  [safe-validation run 29477256937](https://github.com/harutasti/cppseed/actions/runs/29477256937)
 - 更新日: 2026-07-16
 
 ## 1. Reading and status rules
@@ -193,9 +195,9 @@ test/evidence pathの妥当性に対するもので、実行結果やrelease rea
 
 | Role | Reviewer | Result | Date | Evidence |
 |---|---|---|---|---|
-| Technical | `harutasti` | Pending | — | — |
-| Testability | `harutasti` | Pending | — | — |
-| Security | `harutasti` | Pending | — | — |
+| Technical | `harutasti` | Approved | 2026-07-16 | [PR review](https://github.com/harutasti/cppseed/pull/25#pullrequestreview-4711117657) |
+| Testability | `harutasti` | Approved | 2026-07-16 | [PR review](https://github.com/harutasti/cppseed/pull/25#pullrequestreview-4711118538) |
+| Security | `harutasti` | Approved with open release blockers | 2026-07-16 | [PR review](https://github.com/harutasti/cppseed/pull/25#pullrequestreview-4711118833) |
 
 ### Review checklist
 

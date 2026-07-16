@@ -2,17 +2,19 @@
 
 - 文書バージョン: 0.1
 - 対象Gate: G7
-- ステータス: In review
+- ステータス: Approved
 - Test owner: `harutasti`
-- 技術レビュー: Pending
-- テスト可能性レビュー: Pending
-- セキュリティレビュー: Pending
+- 技術レビュー: Approved 2026-07-16
+- テスト可能性レビュー: Approved 2026-07-16
+- セキュリティレビュー: Approved with open release blockers 2026-07-16
 - リリース承認: Not applicable at G7
 - 対象Issue: [#11](https://github.com/harutasti/cppseed/issues/11)
 - 上位文書: [要件定義](requirements.md)、[外部設計](external-design.md)、
   [内部設計](detailed-design.md)、[脅威分析](threat-model.md)
 - 対応表: [トレーサビリティ・マトリクス](traceability.md)
 - Review PR: [#25](https://github.com/harutasti/cppseed/pull/25)
+- CI evidence: [CI run 29477256964](https://github.com/harutasti/cppseed/actions/runs/29477256964)、
+  [safe-validation run 29477256937](https://github.com/harutasti/cppseed/actions/runs/29477256937)
 - 作成日: 2026-07-16
 
 ## 1. Test objective
@@ -192,12 +194,12 @@ SPDX Tools、Action commit SHAをtest reportへ記録する。
 
 ### 8.2 G7 exit
 
-- [ ] `TC-SC-001`–`TC-SC-046` が重複・欠番なく定義されている
-- [ ] 全requirement、ED、DD、threat、riskにcaseまたは明示的なmanual evidenceがある
-- [ ] environment、fixture、expected result、evidence、実行Gateがcaseごとに一意である
-- [ ] test exceptionが0件、またはowner/代替control/承認を持つ
-- [ ] technical、testability、security self-reviewとCIが成功している
-- [ ] test-plan/traceability/initiative READMEが同一PRでApprovedへ更新される
+- [x] `TC-SC-001`–`TC-SC-046` が重複・欠番なく定義されている
+- [x] 全requirement、ED、DD、threat、riskにcaseまたは明示的なmanual evidenceがある
+- [x] environment、fixture、expected result、evidence、実行Gateがcaseごとに一意である
+- [x] test exceptionが0件、またはowner/代替control/承認を持つ
+- [x] technical、testability、security self-reviewとCIが成功している
+- [x] test-plan/traceability/initiative READMEが同一PRでApprovedへ更新される
 
 ### 8.3 G9 verification exit
 
@@ -237,9 +239,9 @@ SPDX Tools、Action commit SHAをtest reportへ記録する。
 
 | Role | Reviewer | Result | Date | Evidence |
 |---|---|---|---|---|
-| Technical | `harutasti` | Pending | — | — |
-| Testability | `harutasti` | Pending | — | — |
-| Security | `harutasti` | Pending | — | — |
+| Technical | `harutasti` | Approved | 2026-07-16 | [PR review](https://github.com/harutasti/cppseed/pull/25#pullrequestreview-4711117657) |
+| Testability | `harutasti` | Approved | 2026-07-16 | [PR review](https://github.com/harutasti/cppseed/pull/25#pullrequestreview-4711118538) |
+| Security | `harutasti` | Approved with open release blockers | 2026-07-16 | [PR review](https://github.com/harutasti/cppseed/pull/25#pullrequestreview-4711118833) |
 
 ### Review checklist
 

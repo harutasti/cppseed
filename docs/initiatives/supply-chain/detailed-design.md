@@ -13,7 +13,7 @@
 - ADR: [ADR-0001](adr/0001-spdx-2-3-toolchain.md)、
   [ADR-0002](adr/0002-signed-build-metadata-predicate.md)、
   [ADR-0003](adr/0003-offline-bundle-and-trusted-root.md)
-- Review PR: Pending
+- Review PR: [#23](https://github.com/harutasti/cppseed/pull/23)
 - 作成日: 2026-07-16
 
 ## 1. Component structure

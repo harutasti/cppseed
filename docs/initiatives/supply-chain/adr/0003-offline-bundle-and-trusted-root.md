@@ -10,6 +10,7 @@
 - Related design: `ED-SC-003`、`ED-SC-007`、`ED-SC-009`、`ED-SC-012`、
   `ED-SC-013`、`ED-SC-014`
 - Feasibility evidence: [G2技術検証結果報告書](../feasibility-report.md)
+- Review PR: [#22](https://github.com/harutasti/cppseed/pull/22)
 - Supersedes: None
 
 ## Context

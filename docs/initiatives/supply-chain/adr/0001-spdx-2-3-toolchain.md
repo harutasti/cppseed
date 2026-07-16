@@ -9,6 +9,7 @@
   `FR-SC-010`、`SR-SC-003`、`NFR-SC-001`、`NFR-SC-003`、`NFR-SC-005`
 - Related design: `ED-SC-005`、`ED-SC-012`
 - Feasibility evidence: [G2技術検証結果報告書](../feasibility-report.md)
+- Review PR: [#22](https://github.com/harutasti/cppseed/pull/22)
 - Supersedes: None
 
 ## Context

@@ -3,11 +3,12 @@
 - 文書バージョン: 0.1
 - 対象: Issue #11（SBOMおよびビルド来歴）
 - 対象リリース: 本要件の実装後に公開する最初のcppseedリリース
-- ステータス: In review
+- ステータス: Approved
 - 文書オーナー: repository maintainer
-- 技術レビュー: Pending
-- セキュリティレビュー: Pending
-- リリース承認: Pending
+- 技術レビュー: Approved 2026-07-16
+- テスト可能性レビュー: Approved 2026-07-16
+- セキュリティレビュー: Approved 2026-07-16
+- リリース承認: Not applicable at G1
 - 作成日: 2026-07-16
 - Initiative: [SBOM and build provenance](README.md)
 - 上位文書: [v0.1.0リリース設計書](../../release-plan.md)、
@@ -340,6 +341,7 @@ SBOM生成、attestation発行および全検証の追加時間は、通常のta
 
 | Role | Reviewer | Result | Date | Evidence |
 |---|---|---|---|---|
-| Technical | `harutasti` | Pending | — | [PR #18](https://github.com/harutasti/cppseed/pull/18) |
-| Security | `harutasti` | Pending | — | [PR #18](https://github.com/harutasti/cppseed/pull/18) |
-| Release | `harutasti` | Pending | — | [PR #18](https://github.com/harutasti/cppseed/pull/18) |
+| Technical | `harutasti` | Approved | 2026-07-16 | [PR #18](https://github.com/harutasti/cppseed/pull/18) |
+| Testability | `harutasti` | Approved | 2026-07-16 | [PR #18](https://github.com/harutasti/cppseed/pull/18) |
+| Security | `harutasti` | Approved | 2026-07-16 | [PR #18](https://github.com/harutasti/cppseed/pull/18) |
+| Release | `harutasti` | Not applicable at G1 | 2026-07-16 | [開発プロセス](../../development-process.md) |

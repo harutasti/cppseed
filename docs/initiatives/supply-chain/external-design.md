@@ -9,6 +9,7 @@
 - セキュリティレビュー: Pending
 - リリース承認: Not applicable at G3
 - 対象Issue: [#11](https://github.com/harutasti/cppseed/issues/11)
+- Review PR: [#21](https://github.com/harutasti/cppseed/pull/21)
 - 上位要件: [リリース・サプライチェーン要件定義書](requirements.md)
 - 技術検証: [G2技術検証結果報告書](feasibility-report.md)
 - 作成日: 2026-07-16
@@ -668,7 +669,7 @@ G4 ADRで作成するため、ADR承認前に実装へ進まない。
 
 | Date | Version | Change | PR |
 |---|---:|---|---|
-| 2026-07-16 | 0.1 | Initial G3 external design candidate | Pending |
+| 2026-07-16 | 0.1 | Initial G3 external design candidate | [#21](https://github.com/harutasti/cppseed/pull/21) |
 
 ## 13. Approval
 

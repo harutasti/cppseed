@@ -1,6 +1,6 @@
 # ADR-0003: target別offline bundleとrelease全体のtrusted root snapshotを配布する
 
-- Status: Proposed
+- Status: Accepted
 - Date: 2026-07-16
 - Decision owners: `harutasti`
 - Related initiative: [SBOM and build provenance](../README.md)
@@ -11,6 +11,8 @@
   `ED-SC-013`、`ED-SC-014`
 - Feasibility evidence: [G2技術検証結果報告書](../feasibility-report.md)
 - Review PR: [#22](https://github.com/harutasti/cppseed/pull/22)
+- Review evidence: [CI run 29472918679](https://github.com/harutasti/cppseed/actions/runs/29472918679)、
+  [safe-validation run 29472918674](https://github.com/harutasti/cppseed/actions/runs/29472918674)
 - Supersedes: None
 
 ## Context
@@ -162,6 +164,6 @@ security advisoryを用意する。既存bundleを検証できない場合は、
 
 | Role | Reviewer | Result | Date | Evidence |
 |---|---|---|---|---|
-| Technical | `harutasti` | Pending | — | — |
-| Testability | `harutasti` | Pending | — | — |
-| Security | `harutasti` | Pending | — | — |
+| Technical | `harutasti` | Approved | 2026-07-16 | [PR #22](https://github.com/harutasti/cppseed/pull/22) |
+| Testability | `harutasti` | Approved | 2026-07-16 | [PR #22](https://github.com/harutasti/cppseed/pull/22) |
+| Security | `harutasti` | Approved | 2026-07-16 | [PR #22](https://github.com/harutasti/cppseed/pull/22) |

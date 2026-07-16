@@ -1,0 +1,89 @@
+name: Engineering change
+description: Propose a governed product, security, compatibility, or release change.
+title: "[Change]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for changes covered by the full development lifecycle.
+        Do not include secrets or embargoed vulnerability details.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and desired outcome
+      description: Describe the user or operational problem and the measurable outcome.
+      placeholder: Users cannot verify which workflow produced a release archive.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: List both in-scope and out-of-scope behavior.
+      value: |
+        In scope:
+        -
+
+        Out of scope:
+        -
+    validations:
+      required: true
+
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Initial risk classification
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+      description: Choose the highest credible impact before mitigation.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Areas affected
+      options:
+        - label: Public CLI or generated-project contract
+        - label: Security boundary, permission, secret, or external communication
+        - label: Release, distribution, signing, SBOM, or provenance
+        - label: Supported platform, toolchain, or compatibility boundary
+        - label: Dependency, package manager, or license
+        - label: Data integrity, deletion, overwrite, or arbitrary-code risk
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Initial acceptance criteria
+      description: State observable conditions, not implementation tasks.
+      placeholder: Every release archive has a verifiable provenance attestation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints, assumptions, and open questions
+      description: Include compatibility, cost, credentials, external services, and unknowns.
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Existing evidence
+      description: Link related Issues, incidents, logs, specifications, or experiments.
+
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Proposal readiness
+      options:
+        - label: I have not included secrets or private vulnerability details.
+          required: true
+        - label: I understand that requirements and design require review before implementation.
+          required: true

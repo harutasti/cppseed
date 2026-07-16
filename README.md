@@ -15,6 +15,12 @@ v0.1.0 design documents:
 - [v0.1 test plan](docs/test-plan.md)
 - [v0.1 release plan](docs/release-plan.md)
 
+Engineering documentation:
+
+- [Documentation index](docs/README.md)
+- [Development and quality-assurance process](docs/development-process.md)
+- [SBOM and build provenance initiative](docs/initiatives/supply-chain/README.md)
+
 ## Usage
 
 ```console

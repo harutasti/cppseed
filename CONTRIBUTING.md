@@ -35,6 +35,21 @@ ctest --test-dir build-werror --output-on-failure
   discussion.
 - Confirm that generated projects build and pass CTest.
 
+## Governed changes
+
+Changes to the public CLI contract, security boundaries, release or distribution
+workflow, supported platforms, compatibility policy, or third-party dependencies
+follow the [development and quality-assurance process](docs/development-process.md).
+
+Start a governed change with the engineering-change Issue form and create an
+initiative directory under `docs/initiatives/` from the provided templates.
+Requirements, design decisions, tests, evidence, operational readiness, and
+acceptance must remain traceable through the initiative register.
+
+Small changes that do not affect public behavior or risk may use the tailored
+process. The pull request must explain why the full lifecycle is not applicable,
+what was inspected, and what validation was performed.
+
 ## Release documentation
 
 For each release, maintainers move the relevant `Unreleased` entries into a

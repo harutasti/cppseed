@@ -313,6 +313,7 @@ WORKFLOW=harutasti/cppseed/.github/workflows/release.yml
 gh attestation verify "$ARCHIVE" \
   --repo "$REPOSITORY" \
   --signer-workflow "$WORKFLOW" \
+  --signer-digest "$SOURCE_SHA" \
   --source-ref "refs/tags/v$VERSION" \
   --source-digest "$SOURCE_SHA" \
   --predicate-type https://slsa.dev/provenance/v1 \
@@ -351,6 +352,7 @@ env -u GH_TOKEN -u GITHUB_TOKEN \
     --bundle "$BUNDLE" \
     --custom-trusted-root "$ROOT" \
     --signer-workflow "$WORKFLOW" \
+    --signer-digest "$SOURCE_SHA" \
     --source-ref "refs/tags/v$VERSION" \
     --source-digest "$SOURCE_SHA" \
     --predicate-type https://slsa.dev/provenance/v1 \
@@ -443,7 +445,8 @@ draft作成前に最低限、次を自動検証する。
 4. 各archiveのSHA-256がSPDX、metadata、`SHA256SUMS`、3 subjectで一致する
 5. 各metadataがschemaとallowlistに一致し、禁止patternや絶対workspace pathを含まない
 6. dependency reportが存在し、未解決または許可していないdynamic dependencyを含まない
-7. 12 online verificationがrepository、workflow、tag、commit、runner、predicate制約付きで成功する
+7. 12 online verificationがrepository、workflow path/digest、tag、source commit、runner、
+   predicate制約付きで成功する
 8. 4 SBOM predicateと4 metadata predicateが対応するRelease JSONと意味的に一致する
 9. 12 offline verificationがnetwork/tokenなし、bundleとtrusted rootだけで成功する
 10. bundleがtargetごとにexactly 3 JSON linesを持ち、未知predicateを含まない

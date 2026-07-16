@@ -2,11 +2,11 @@
 
 - 文書バージョン: 0.1
 - 対象Gate: G5
-- ステータス: In review
+- ステータス: Approved
 - 文書オーナー: `harutasti`
-- 技術レビュー: Pending
-- テスト可能性レビュー: Pending
-- セキュリティレビュー: Pending
+- 技術レビュー: Approved 2026-07-16
+- テスト可能性レビュー: Approved 2026-07-16
+- セキュリティレビュー: Approved 2026-07-16
 - リリース承認: Not applicable at G5
 - 対象Issue: [#11](https://github.com/harutasti/cppseed/issues/11)
 - 上位設計: [リリース・サプライチェーン外部設計書](external-design.md)
@@ -14,6 +14,8 @@
   [ADR-0002](adr/0002-signed-build-metadata-predicate.md)、
   [ADR-0003](adr/0003-offline-bundle-and-trusted-root.md)
 - Review PR: [#23](https://github.com/harutasti/cppseed/pull/23)
+- CI evidence: [CI run 29473956870](https://github.com/harutasti/cppseed/actions/runs/29473956870)、
+  [safe-validation run 29473956851](https://github.com/harutasti/cppseed/actions/runs/29473956851)
 - 作成日: 2026-07-16
 
 ## 1. Component structure
@@ -672,9 +674,9 @@ G6/G7およびG8を開始できる内部設計baselineの承認である。
 
 | Role | Reviewer | Result | Date | Evidence |
 |---|---|---|---|---|
-| Technical | `harutasti` | Pending | — | — |
-| Testability | `harutasti` | Pending | — | — |
-| Security | `harutasti` | Pending | — | — |
+| Technical | `harutasti` | Approved | 2026-07-16 | [PR #23 review](https://github.com/harutasti/cppseed/pull/23#pullrequestreview-4710690302) |
+| Testability | `harutasti` | Approved | 2026-07-16 | [PR #23 review](https://github.com/harutasti/cppseed/pull/23#pullrequestreview-4710690387) |
+| Security | `harutasti` | Approved | 2026-07-16 | [PR #23 review](https://github.com/harutasti/cppseed/pull/23#pullrequestreview-4710690555) |
 
 ### Review checklist
 

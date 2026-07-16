@@ -106,8 +106,8 @@ Option 1を採用する。
 8. `evidence.sbom.sha256` と `evidence.dependencyReport.sha256` で補助assetもsigned predicateへ結び付ける
 9. online/offline verificationはrepository、signer workflow path/digest、source ref/digest、
    predicate type、GitHub-hosted runnerをすべて制約する
-10. schemaの後方互換追加は `schemaVersion: 1` で許容できるが、fieldの意味変更・削除・必須性変更は
-    predicate type `/v2` と新しいADRを必要とする
+10. `schemaVersion: 1` は未知fieldを拒否するclosed contractとする。fieldの追加・削除・意味変更・
+    必須性変更はpredicate type `/v2`、`schemaVersion: 2` および新しいADRを必要とする
 
 署名は「このGitHub identityを持つworkflowがこのstatementを発行した」ことを証明する。
 predicate内のcompiler version等が現実と一致することは、収集方法、allowlist、独立commandとの比較、

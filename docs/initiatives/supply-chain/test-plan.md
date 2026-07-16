@@ -12,7 +12,7 @@
 - 上位文書: [要件定義](requirements.md)、[外部設計](external-design.md)、
   [内部設計](detailed-design.md)、[脅威分析](threat-model.md)
 - 対応表: [トレーサビリティ・マトリクス](traceability.md)
-- Review PR: Pending
+- Review PR: [#25](https://github.com/harutasti/cppseed/pull/25)
 - 作成日: 2026-07-16
 
 ## 1. Test objective

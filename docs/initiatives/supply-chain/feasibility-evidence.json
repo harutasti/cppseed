@@ -9,7 +9,8 @@
     "commit": "b74235fff27d1f34f809ba1d31f61515b5c8f473",
     "tag": "spike/supply-chain-g2-20260716",
     "tagObject": "aaf7d50144357de4721cdf3db7125e03e61f4693",
-    "harnessPullRequest": 19
+    "harnessPullRequest": 19,
+    "resultPullRequest": 20
   },
   "workflow": {
     "path": ".github/workflows/supply-chain-feasibility.yml",

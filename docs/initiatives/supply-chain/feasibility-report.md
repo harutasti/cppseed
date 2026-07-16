@@ -8,7 +8,7 @@
 - 計画書: [G2技術検証計画書](feasibility-plan.md)
 - 機械可読証跡: [feasibility-evidence.json](feasibility-evidence.json)
 - 検証基盤: [PR #19](https://github.com/harutasti/cppseed/pull/19)
-- 結果承認PR: Under review
+- 結果承認PR: [PR #20](https://github.com/harutasti/cppseed/pull/20)
 - 実施日: 2026-07-16
 
 ## 1. 結論

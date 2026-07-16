@@ -2,14 +2,16 @@
 
 - 文書バージョン: 0.1
 - 対象Gate: G3
-- ステータス: In review
+- ステータス: Approved
 - 文書オーナー: `harutasti`
-- 技術レビュー: Pending
-- テスト可能性レビュー: Pending
-- セキュリティレビュー: Pending
+- 技術レビュー: Approved 2026-07-16
+- テスト可能性レビュー: Approved 2026-07-16
+- セキュリティレビュー: Approved 2026-07-16
 - リリース承認: Not applicable at G3
 - 対象Issue: [#11](https://github.com/harutasti/cppseed/issues/11)
 - Review PR: [#21](https://github.com/harutasti/cppseed/pull/21)
+- CI evidence: [CI run 29471390567](https://github.com/harutasti/cppseed/actions/runs/29471390567)、
+  [safe-validation run 29471390585](https://github.com/harutasti/cppseed/actions/runs/29471390585)
 - 上位要件: [リリース・サプライチェーン要件定義書](requirements.md)
 - 技術検証: [G2技術検証結果報告書](feasibility-report.md)
 - 作成日: 2026-07-16
@@ -673,6 +675,7 @@ G4 ADRで作成するため、ADR承認前に実装へ進まない。
 | Date | Version | Change | PR |
 |---|---:|---|---|
 | 2026-07-16 | 0.1 | Initial G3 external design candidate | [#21](https://github.com/harutasti/cppseed/pull/21) |
+| 2026-07-16 | 0.1 | Technical、testability、security self-reviewを完了しG3 baselineを承認 | [#21](https://github.com/harutasti/cppseed/pull/21) |
 
 ## 13. Approval
 
@@ -680,7 +683,7 @@ G4 ADRで作成するため、ADR承認前に実装へ進まない。
 
 | Role | Reviewer | Result | Date | Evidence |
 |---|---|---|---|---|
-| Technical | `harutasti` | Pending | — | — |
-| Testability | `harutasti` | Pending | — | — |
-| Security | `harutasti` | Pending | — | — |
+| Technical | `harutasti` | Approved | 2026-07-16 | [PR #21](https://github.com/harutasti/cppseed/pull/21) |
+| Testability | `harutasti` | Approved | 2026-07-16 | [PR #21](https://github.com/harutasti/cppseed/pull/21) |
+| Security | `harutasti` | Approved | 2026-07-16 | [PR #21](https://github.com/harutasti/cppseed/pull/21) |
 | Release | `harutasti` | Not applicable at G3 | 2026-07-16 | [開発プロセス](../../development-process.md) |

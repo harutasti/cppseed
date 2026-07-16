@@ -42,3 +42,23 @@ versioned section with the release date, update the comparison links at the end
 of `CHANGELOG.md`, and prepare matching GitHub Release notes. Published release
 entries are historical records and must not be rewritten to describe later
 changes.
+
+## GitHub Actions dependencies
+
+Dependabot checks GitHub Actions dependencies monthly and groups routine
+updates into one pull request. Security updates may be handled sooner.
+
+When reviewing an Actions update:
+
+1. Read the official release notes and identify breaking changes and runner
+   requirements.
+2. Confirm that the release commit is verified and that `action.yml` uses a
+   supported Node.js runtime.
+3. Pin `uses:` to the release's full 40-character commit SHA and update the
+   adjacent version comment. Do not merge a tag-only or shortened SHA reference.
+4. Confirm that workflow permissions remain least-privilege and that no new
+   secrets are exposed to pull-request jobs.
+5. Run YAML parsing and `actionlint`, then require the normal CI matrix and the
+   four-platform release packaging dry run to pass.
+6. Inspect the completed workflow annotations for runtime-deprecation or action
+   migration warnings before merging.

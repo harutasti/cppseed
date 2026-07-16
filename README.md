@@ -3,9 +3,11 @@
 `cppseed` is a dependency-free C++ CLI for generating small, buildable CMake
 projects.
 
-> Status: v0.1.0 implementation in progress
+> Latest stable release: [v0.1.0](https://github.com/harutasti/cppseed/releases/tag/v0.1.0)
 
-Design documents:
+See [CHANGELOG.md](CHANGELOG.md) for released and upcoming changes.
+
+v0.1.0 design documents:
 
 - [v0.1 requirements](docs/requirements.md)
 - [v0.1 external design](docs/basic-design.md)

@@ -3,9 +3,14 @@
 - 文書バージョン: 0.1
 - 対象: Issue #11（SBOMおよびビルド来歴）
 - 対象リリース: 本要件の実装後に公開する最初のcppseedリリース
-- ステータス: Draft
+- ステータス: In review
+- 文書オーナー: repository maintainer
+- 技術レビュー: Pending
+- セキュリティレビュー: Pending
+- リリース承認: Pending
 - 作成日: 2026-07-16
-- 上位文書: [v0.1.0リリース設計書](release-plan.md)、
+- Initiative: [SBOM and build provenance](README.md)
+- 上位文書: [v0.1.0リリース設計書](../../release-plan.md)、
   [1.0ロードマップ](https://github.com/harutasti/cppseed/issues/15)
 
 ## 1. 目的
@@ -324,3 +329,17 @@ SBOM生成、attestation発行および全検証の追加時間は、通常のta
 - [SPDX Specifications](https://spdx.dev/use/specifications/)
 - [SLSA Provenance](https://slsa.dev/spec/v1.2/provenance)
 - [Issue #11](https://github.com/harutasti/cppseed/issues/11)
+
+## 12. 変更履歴
+
+| Date | Version | Change | PR |
+|---|---:|---|---|
+| 2026-07-16 | 0.1 | Initial requirements baseline candidate | [#18](https://github.com/harutasti/cppseed/pull/18) |
+
+## 13. 承認
+
+| Role | Reviewer | Result | Date | Evidence |
+|---|---|---|---|---|
+| Technical | `harutasti` | Pending | — | [PR #18](https://github.com/harutasti/cppseed/pull/18) |
+| Security | `harutasti` | Pending | — | [PR #18](https://github.com/harutasti/cppseed/pull/18) |
+| Release | `harutasti` | Pending | — | [PR #18](https://github.com/harutasti/cppseed/pull/18) |

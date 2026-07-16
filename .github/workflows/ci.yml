@@ -88,6 +88,8 @@ jobs:
               done
           done < <(find . -type f -name '*.md' \
             -not -path './build*/*' -print0)
+      - name: Check documentation governance
+        run: bash .github/scripts/check-documentation-governance.sh
 
   coverage:
     runs-on: ubuntu-24.04

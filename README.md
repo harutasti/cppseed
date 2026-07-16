@@ -15,9 +15,11 @@ v0.1.0 design documents:
 - [v0.1 test plan](docs/test-plan.md)
 - [v0.1 release plan](docs/release-plan.md)
 
-Post-v0.1 release engineering:
+Engineering documentation:
 
-- [SBOM and build provenance requirements](docs/supply-chain-requirements.md)
+- [Documentation index](docs/README.md)
+- [Development and quality-assurance process](docs/development-process.md)
+- [SBOM and build provenance initiative](docs/initiatives/supply-chain/README.md)
 
 ## Usage
 

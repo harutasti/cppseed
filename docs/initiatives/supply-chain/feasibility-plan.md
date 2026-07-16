@@ -2,7 +2,7 @@
 
 - 文書バージョン: 0.1
 - 対象Gate: G2
-- ステータス: In review
+- ステータス: Executed and approved
 - Owner: `harutasti`
 - 対象Issue: [#11](https://github.com/harutasti/cppseed/issues/11)
 - 上位文書: [要件定義書](requirements.md)
@@ -91,8 +91,10 @@ Actions artifactの期限切れ後も、attestation service、tag、workflow run
 
 ## 8. Review checklist
 
-- [ ] Technical: toolの入出力、SPDX変換、digest対応を再現できる
-- [ ] Testability: 各 `FZ-SC-*` に自動判定または明示的な手動判定がある
-- [ ] Security: PRとtrusted jobの権限、ref validation、Action pinが妥当である
-- [ ] Operations: 正式releaseを作らず、失敗時に安全に停止できる
-- [ ] Evidence: run URL、commit、artifact digest、所要時間を結果報告書へ残せる
+- [x] Technical: toolの入出力、SPDX変換、digest対応を再現できる
+- [x] Testability: 各 `FZ-SC-*` に自動判定または明示的な手動判定がある
+- [x] Security: PRとtrusted jobの権限、ref validation、Action pinが妥当である
+- [x] Operations: 正式releaseを作らず、失敗時に安全に停止できる
+- [x] Evidence: run URL、commit、artifact digest、所要時間を結果報告書へ残せる
+
+実行結果とGate判定は[技術検証結果報告書](feasibility-report.md)を参照する。

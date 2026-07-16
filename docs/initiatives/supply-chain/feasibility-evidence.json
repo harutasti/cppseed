@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "initiative": "SC",
+  "gate": "G2",
+  "verdict": "PASS",
+  "executedAt": "2026-07-16T03:00:22Z",
+  "source": {
+    "repository": "harutasti/cppseed",
+    "commit": "b74235fff27d1f34f809ba1d31f61515b5c8f473",
+    "tag": "spike/supply-chain-g2-20260716",
+    "tagObject": "aaf7d50144357de4721cdf3db7125e03e61f4693",
+    "harnessPullRequest": 19
+  },
+  "workflow": {
+    "path": ".github/workflows/supply-chain-feasibility.yml",
+    "runId": 29467892590,
+    "runUrl": "https://github.com/harutasti/cppseed/actions/runs/29467892590",
+    "jobId": 87524812395,
+    "jobUrl": "https://github.com/harutasti/cppseed/actions/runs/29467892590/job/87524812395",
+    "jobDurationSeconds": 40,
+    "conclusion": "success"
+  },
+  "workflowArtifact": {
+    "id": 8363640681,
+    "name": "supply-chain-g2-tag-29467892590",
+    "sha256": "efb199fa33bd6abdad606e71645aec29031fa24e3d480b7026783fb5422ebe2f",
+    "sizeBytes": 107845,
+    "expiresAt": "2026-08-15T03:00:18Z"
+  },
+  "subject": {
+    "name": "cppseed-g2-v0.1.0-x86_64-unknown-linux-gnu.tar.gz",
+    "sha256": "b105684b30073ee148423939cffb0c98f998e996d862df9ce6714f7a1280fd08"
+  },
+  "attestations": [
+    {
+      "kind": "build-provenance",
+      "id": 35567643,
+      "url": "https://github.com/harutasti/cppseed/attestations/35567643",
+      "predicateType": "https://slsa.dev/provenance/v1",
+      "bundleSha256": "4fd8bd16b7fd9b1e959f587b1a61bdae3f379be49febb6ba1ef06069e3c1dac3",
+      "transparencyLogTimestamp": "2026-07-16T03:00:06Z"
+    },
+    {
+      "kind": "sbom",
+      "id": 35567646,
+      "url": "https://github.com/harutasti/cppseed/attestations/35567646",
+      "predicateType": "https://spdx.dev/Document/v2.3",
+      "bundleSha256": "cfdf88cbf08b035c0cf7333c9c792088a6c38967c56cb876e3eb39c67019bdf5",
+      "transparencyLogTimestamp": "2026-07-16T03:00:07Z"
+    }
+  ],
+  "identity": {
+    "signer": "https://github.com/harutasti/cppseed/.github/workflows/supply-chain-feasibility.yml@refs/tags/spike/supply-chain-g2-20260716",
+    "sourceRef": "refs/tags/spike/supply-chain-g2-20260716",
+    "sourceDigest": "b74235fff27d1f34f809ba1d31f61515b5c8f473",
+    "runnerEnvironment": "github-hosted",
+    "oidcIssuer": "https://token.actions.githubusercontent.com"
+  },
+  "evidenceSha256": {
+    "archiveSha256sums": "a12050ef8e00ca71e798115f8ba26f8247138dd314c7d80d46b5de0f3fb2a631",
+    "spdxJson": "29e2249ef10ec66a30a96310d347107e1e71640444fea6c4ad6ad5fdbb31455b",
+    "normalizedAttestedSpdx": "69dbb53aef345b66e9c209a717c019fec16eef6ef51ef24a9cb6830c0d4045e9",
+    "buildMetadata": "6519e687b7bce72b69063efbae10e6a879824af32e890885523c7a035d4547cb",
+    "trustedRoot": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c",
+    "onlineProvenanceVerification": "883dcd96e55d9eb14a4c8a7598385650d4d110319650ad84491b7de35ee55180",
+    "offlineProvenanceVerification": "883dcd96e55d9eb14a4c8a7598385650d4d110319650ad84491b7de35ee55180",
+    "onlineSbomVerification": "266d282105ad3b2cc737a6a88d1a6896dfbe3417fa76ea01c06a2a353a54a829",
+    "offlineSbomVerification": "266d282105ad3b2cc737a6a88d1a6896dfbe3417fa76ea01c06a2a353a54a829"
+  },
+  "tools": {
+    "actionsAttest": "4.1.1",
+    "gh": "2.96.0",
+    "syft": "1.46.0",
+    "spdxTools": "0.8.5",
+    "python": "3.10.12",
+    "cmake": "3.31.6",
+    "compiler": "g++ 11.4.0",
+    "runnerImage": "ubuntu22/20260705.219.1"
+  },
+  "checks": [
+    {"id": "FZ-SC-001", "result": "PASS"},
+    {"id": "FZ-SC-002", "result": "PASS"},
+    {"id": "FZ-SC-003", "result": "PASS"},
+    {"id": "FZ-SC-004", "result": "PASS"},
+    {"id": "FZ-SC-005", "result": "PASS"},
+    {"id": "FZ-SC-006", "result": "PASS"},
+    {"id": "FZ-SC-007", "result": "PASS"},
+    {"id": "FZ-SC-008", "result": "PASS"},
+    {"id": "FZ-SC-009", "result": "PASS"}
+  ],
+  "knownDeviation": {
+    "id": "DEV-SC-G2-001",
+    "failedRunId": 29467586457,
+    "resolution": "Locked the Python 3.10-only rdflib dependency isodate 0.7.2 by wheel SHA-256."
+  }
+}
